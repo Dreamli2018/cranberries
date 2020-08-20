@@ -1,0 +1,26 @@
+server:
+  port: 10010
+
+spring:
+  application:
+    name: eureka-server
+  freemarker:
+    prefer-file-system-access: false
+  security:
+    basic:
+      enabled: true
+    user:
+      name: dreamli
+      password: 369254
+
+#注册中心服务
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka
+  server:
+    enable-self-preservation: false
+
+

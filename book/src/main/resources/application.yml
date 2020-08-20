@@ -1,0 +1,71 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: book
+
+#eureka配置
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://dreamli:369254@127.0.0.1:10010/eureka
+      defaultZone: http://dreamli:369254@peer1:10086/eureka,http://dreamli:369254@peer2:10087/eureka,http://dreamli:369254@peer3:10088/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+    #kafka配置
+  kafka:
+    bootstrap-servers:
+    client-id:
+    producer:
+      bootstrap-servers:
+      acks:
+      batch-size:
+      buffer-memory:
+      client-id:
+      retries:
+      compression-type:
+      key-serializer:
+      value-serializer:
+      transaction-id-prefix:
+    consumer:
+      bootstrap-servers:
+      client-id:
+      group-id:
+      enable-auto-commit:
+      auto-offset-reset:
+      fetch-min-size:
+      fetch-max-wait:
+      max-poll-records:
+      auto-commit-interval:
+      heartbeat-interval:
+      key-deserializer:
+      value-deserializer:
+    listener:
+      type: single
+      client-id:
+      ack-mode:
+      ack-time:
+      ack-count:
+      concurrency:
+      poll-timeout:
+      idle-event-interval:
+      no-poll-threshold:
+      log-container-config: false
+      monitor-interval:
+    admin:
+      client-id:
+      fail-fast: false
+      ssl:
+        key-password:
+        keystore-location: application.yml
+        key-store-type:
+        keystore-password:
+        protocol:
+        trust-store-type:
+        truststore-location: application.yml
+        truststore-password:

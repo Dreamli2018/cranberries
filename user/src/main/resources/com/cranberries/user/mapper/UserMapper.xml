@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cranberries.user.mapper.UserMapper">
+    <!--全局二级缓存-->
+    <cache
+      eviction="FIFO"
+      flushInterval="60000"
+      size="512"
+      readOnly="true"/>
+
+    <insert id="register" parameterType="com.cranberries.user.model.User" flushCache="true">
+        INSERT INTO user(
+            name,
+            age,
+            gender,
+            phone,
+            id_card,
+            address,
+            email
+            )
+            VALUES
+            (
+             #{name},
+             #{age},
+             #{gender},
+             #{phone},
+             #{idCard},
+             #{address},
+             #{email}
+             );
+    </insert>
+
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.cranberries.user.model.User" flushCache="false" useCache="true">
+        select * , id_card as idCard from user where id = #{userId};
+    </select>
+</mapper>

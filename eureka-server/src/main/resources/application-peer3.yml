@@ -1,0 +1,30 @@
+server:
+  port: 10088
+
+spring:
+  application:
+    name: eureka-server
+  freemarker:
+    prefer-file-system-access: false
+  security:
+    basic:
+      enabled: true
+    user:
+      name: dreamli
+      password: 369254
+
+#注册中心服务
+eureka:
+  instance:
+    hostname: peer3
+    prefer-ip-address: false
+    appname: eureka-server
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://dreamli:369254@peer1:10086/eureka/,http://dreamli:369254@peer2:10087/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 60000
+
