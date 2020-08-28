@@ -34,5 +34,7 @@ public class GcTest {
         date = calendar.getTime();
 
         System.out.println("当前日期：" + date);
+
+        System.out.println(System.currentTimeMillis());
     }
 }
