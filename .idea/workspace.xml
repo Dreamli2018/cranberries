@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="961d8374-95fc-437a-b1c9-d3c62fc33b6c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/book/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/main/java/com/cranberries/book/BooksApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book/src/main/java/com/cranberries/book/BookApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/test/java/com/cranberries/user/GcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/test/java/com/cranberries/user/GcTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/maven/apache-maven-3.6.3/repository" />
+        <option name="mavenHome" value="$USER_HOME$/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="$USER_HOME$/maven/apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1gM37U6hLmHYkz51o65QyWuOqqs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.SumTest.sumListTest">
+    <configuration name="GcTest.testDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cranberries.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cranberries.user" />
+      <option name="MAIN_CLASS_NAME" value="com.cranberries.user.GcTest" />
+      <option name="METHOD_NAME" value="testDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SumTest.sumListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cranberries.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cranberries.user" />
+      <option name="MAIN_CLASS_NAME" value="com.cranberries.user.SumTest" />
+      <option name="METHOD_NAME" value="sumListTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="NOT_SET" />
+            <option name="failureBehavior" value="NOT_SET" />
+            <option name="localRepository" value="$USER_HOME$/maven/apache-maven-3.6.3/respository" />
+            <option name="mavenHome" value="$USER_HOME$/maven/apache-maven-3.6.3" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="INFO" />
+            <option name="pluginUpdatePolicy" value="DEFAULT" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="threads" />
+            <option name="updateIndicesOnProjectOpen" value="true" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="userSettingsFile" value="$USER_HOME$/maven/apache-maven-3.6.3/conf/settings.xml" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="1.8 (2)" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$USER_HOME$/Cranberries/workspace" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="BooksApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="book" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.book.BookApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="consul-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.consul.ConsulServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.register.EurekaServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MusicApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="music" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.music.MusicApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.user.UserApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="peer1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.register.EurekaServerApplication" />
+      <option name="ACTIVE_PROFILES" value="peer1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="peer2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.register.EurekaServerApplication" />
+      <option name="ACTIVE_PROFILES" value="peer2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="peer3" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cranberries.register.EurekaServerApplication" />
+      <option name="ACTIVE_PROFILES" value="peer3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.GcTest.testDate" />
+      <item itemvalue="Spring Boot.BooksApplication" />
+      <item itemvalue="Spring Boot.ConsulServerApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.peer1" />
+      <item itemvalue="Spring Boot.peer2" />
+      <item itemvalue="Spring Boot.peer3" />
+      <item itemvalue="Spring Boot.MusicApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+      <item itemvalue="JUnit.SumTest.sumListTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SumTest.sumListTest" />
+        <item itemvalue="JUnit.GcTest.testDate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="961d8374-95fc-437a-b1c9-d3c62fc33b6c" name="Default Changelist" comment="" />
+      <created>1597910466833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597910466833</updated>
+      <workItem from="1597910476130" duration="708000" />
+      <workItem from="1597911217578" duration="473000" />
+      <workItem from="1597911732838" duration="515000" />
+      <workItem from="1597912254701" duration="16000" />
+      <workItem from="1597912299894" duration="2741000" />
+      <workItem from="1597927156451" duration="7590000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="353" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598510223336">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="353" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.837@0.23.1440.837" timestamp="1598510223336" />
+    <state x="353" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.838@0.23.1440.838" timestamp="1598507624794" />
+    <state x="353" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.839@0.23.1440.839" timestamp="1597928215303" />
+    <state x="626" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1597928204223">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="626" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.838@0.23.1440.838" timestamp="1597926926158" />
+    <state x="626" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.839@0.23.1440.839" timestamp="1597928204223" />
+    <state width="1358" height="511" key="GridCell.Tab.0.bottom" timestamp="1598581882115">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1598581882115" />
+    <state width="1358" height="453" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1597928563183" />
+    <state width="1358" height="453" key="GridCell.Tab.0.bottom/0.23.1440.839@0.23.1440.839" timestamp="1597928259190" />
+    <state width="1358" height="453" key="GridCell.Tab.0.bottom/0.23.1440.840@0.23.1440.840" timestamp="1598319624838" />
+    <state width="1358" height="511" key="GridCell.Tab.0.center" timestamp="1598581882114">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1598581882114" />
+    <state width="1358" height="453" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1597928563182" />
+    <state width="1358" height="453" key="GridCell.Tab.0.center/0.23.1440.839@0.23.1440.839" timestamp="1597928259189" />
+    <state width="1358" height="453" key="GridCell.Tab.0.center/0.23.1440.840@0.23.1440.840" timestamp="1598319624837" />
+    <state width="1358" height="511" key="GridCell.Tab.0.left" timestamp="1598581882114">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1598581882114" />
+    <state width="1358" height="453" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1597928563182" />
+    <state width="1358" height="453" key="GridCell.Tab.0.left/0.23.1440.839@0.23.1440.839" timestamp="1597928259189" />
+    <state width="1358" height="453" key="GridCell.Tab.0.left/0.23.1440.840@0.23.1440.840" timestamp="1598319624836" />
+    <state width="1358" height="511" key="GridCell.Tab.0.right" timestamp="1598581882115">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1598581882115" />
+    <state width="1358" height="453" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1597928563183" />
+    <state width="1358" height="453" key="GridCell.Tab.0.right/0.23.1440.839@0.23.1440.839" timestamp="1597928259190" />
+    <state width="1358" height="453" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1598319624838" />
+    <state width="1358" height="511" key="GridCell.Tab.1.bottom" timestamp="1598581882117">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.1.bottom/0.23.1440.837@0.23.1440.837" timestamp="1598581882117" />
+    <state width="1358" height="453" key="GridCell.Tab.1.bottom/0.23.1440.838@0.23.1440.838" timestamp="1597928563187" />
+    <state width="1358" height="453" key="GridCell.Tab.1.bottom/0.23.1440.839@0.23.1440.839" timestamp="1597928259191" />
+    <state width="1358" height="453" key="GridCell.Tab.1.bottom/0.23.1440.840@0.23.1440.840" timestamp="1598319624840" />
+    <state width="1358" height="511" key="GridCell.Tab.1.center" timestamp="1598581882116">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.1.center/0.23.1440.837@0.23.1440.837" timestamp="1598581882116" />
+    <state width="1358" height="453" key="GridCell.Tab.1.center/0.23.1440.838@0.23.1440.838" timestamp="1597928563186" />
+    <state width="1358" height="453" key="GridCell.Tab.1.center/0.23.1440.839@0.23.1440.839" timestamp="1597928259191" />
+    <state width="1358" height="453" key="GridCell.Tab.1.center/0.23.1440.840@0.23.1440.840" timestamp="1598319624839" />
+    <state width="1358" height="511" key="GridCell.Tab.1.left" timestamp="1598581882116">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.1.left/0.23.1440.837@0.23.1440.837" timestamp="1598581882116" />
+    <state width="1358" height="453" key="GridCell.Tab.1.left/0.23.1440.838@0.23.1440.838" timestamp="1597928563183" />
+    <state width="1358" height="453" key="GridCell.Tab.1.left/0.23.1440.839@0.23.1440.839" timestamp="1597928259190" />
+    <state width="1358" height="453" key="GridCell.Tab.1.left/0.23.1440.840@0.23.1440.840" timestamp="1598319624839" />
+    <state width="1358" height="511" key="GridCell.Tab.1.right" timestamp="1598581882116">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1358" height="511" key="GridCell.Tab.1.right/0.23.1440.837@0.23.1440.837" timestamp="1598581882116" />
+    <state width="1358" height="453" key="GridCell.Tab.1.right/0.23.1440.838@0.23.1440.838" timestamp="1597928563187" />
+    <state width="1358" height="453" key="GridCell.Tab.1.right/0.23.1440.839@0.23.1440.839" timestamp="1597928259191" />
+    <state width="1358" height="453" key="GridCell.Tab.1.right/0.23.1440.840@0.23.1440.840" timestamp="1598319624840" />
+    <state x="241" y="24" key="SettingsEditor" timestamp="1597913124951">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="241" y="24" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1597913124951" />
+    <state x="417" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1597927157129">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="417" y="248" key="com.intellij.ide.util.TipDialog/0.23.1440.838@0.23.1440.838" timestamp="1597927157129" />
+    <state x="405" y="185" width="670" height="676" key="search.everywhere.popup" timestamp="1597911424682">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="405" y="185" width="670" height="676" key="search.everywhere.popup/0.23.1440.838@0.23.1440.838" timestamp="1597911424682" />
+  </component>
+</project>
