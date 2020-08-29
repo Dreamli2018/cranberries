@@ -7,30 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-<<<<<<< HEAD
-        <module name="register" />
         <module name="music" />
         <module name="consul-server" />
         <module name="user" />
-=======
-        <module name="user" />
-        <module name="music" />
-        <module name="consul-server" />
-        <module name="eureka-server" />
->>>>>>> e1043f7a1b4b67e6f1fb8de82288a190092edc52
         <module name="book" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="book" target="1.8" />
       <module name="consul-server" target="1.8" />
-<<<<<<< HEAD
-      <module name="music" target="1.8" />
-      <module name="register" target="1.8" />
-=======
       <module name="eureka-server" target="1.8" />
       <module name="music" target="1.8" />
->>>>>>> e1043f7a1b4b67e6f1fb8de82288a190092edc52
       <module name="store" target="1.8" />
       <module name="user" target="1.8" />
     </bytecodeTargetLevel>
@@ -39,13 +27,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="book" options="-parameters" />
       <module name="consul-server" options="-parameters" />
-<<<<<<< HEAD
-      <module name="music" options="-parameters" />
-      <module name="register" options="-parameters" />
-=======
       <module name="eureka-server" options="-parameters" />
       <module name="music" options="-parameters" />
->>>>>>> e1043f7a1b4b67e6f1fb8de82288a190092edc52
       <module name="user" options="-parameters" />
     </option>
   </component>
