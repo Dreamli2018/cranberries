@@ -14,12 +14,12 @@ public class ResultVO<T> implements Serializable {
     /**
      * 响应状态码
      */
-    private String resultCode;
+    private String code;
 
     /**
      * 响应信息
      */
-    private String resultMsg;
+    private String message;
 
     /**
      * 响应具体数据

@@ -8,4 +8,6 @@ public interface UserService {
     ResultVO<String> register(User user);
 
     ResultVO<User> getUserById(int userId);
+
+    void updateUser(User user);
 }

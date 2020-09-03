@@ -30,7 +30,7 @@ public class UserController {
 
         resultVO = userService.register(user);
 
-        if (resultVO != null && !"0".equals(resultVO.getResultCode())) {
+        if (resultVO != null && !"0".equals(resultVO.getCode())) {
 
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
@@ -44,11 +44,20 @@ public class UserController {
 
         resultVO = userService.getUserById(userId);
 
-        if (resultVO != null && !"0".equals(resultVO.getResultCode())) {
+        if (resultVO != null && !"0".equals(resultVO.getCode())) {
 
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
         return ResponseEntity.status(HttpStatus.OK).body(resultVO);
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<ResultVO> updateUser(@RequestBody User user){
+        this.userService.updateUser(user);
+        ResultVO<Object> vo = new ResultVO<>();
+        vo.setCode("200");
+        vo.setMessage("Success");
+        return ResponseEntity.status(HttpStatus.OK).body(vo);
     }
 
 }

@@ -3,7 +3,6 @@ package com.cranberries.user.mapper;
 import com.cranberries.user.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface UserMapper {
@@ -12,4 +11,6 @@ public interface UserMapper {
 
 //    @Select("select * from user where id = #{userId}")
     User getUserById(@Param(value = "userId") int userId);
+
+    void updateUser(@Param("user") User user);
 }
