@@ -36,7 +36,6 @@
         <mybatis.version>3.5.3</mybatis.version>
         <!--        <mysql.version>8.0.12</mysql.version>-->
         <mysql.version>8.0.15</mysql.version>
-        <mongodb.version>2.3.0.RELEASE</mongodb.version>
         <zkclient.version>0.1</zkclient.version>
         <fastjson.version>1.2.67</fastjson.version>
         <javax.servlet.version>4.0.1</javax.servlet.version>
@@ -118,13 +117,6 @@
                 <groupId>org.springframework.security.oauth</groupId>
                 <artifactId>spring-security-oauth2</artifactId>
                 <version>${spring-security-oauth2.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-mongodb</artifactId>
-                <version>${mongodb.version}</version>
             </dependency>
 
             <dependency>
@@ -310,6 +302,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-autoconfigure</artifactId>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.73</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
