@@ -146,4 +146,13 @@ public class JunitPerfTest {
         user.setId(6);
         this.userService.updateUser(user);
     }
+
+    @Test
+    void changeRowTest() {
+        StringBuilder message = new StringBuilder();
+
+        message.append("已分配状态存在2个产品超时,").append("\n").append("最终采购价状态存在1个产品超时,").append("\n");
+        message.append("请联系部门经理解锁！");
+        System.out.println(message.toString());
+    }
 }

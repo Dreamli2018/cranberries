@@ -4,12 +4,13 @@
 <mapper namespace="com.cranberries.user.mapper.UserMapper">
     <!--全局二级缓存-->
     <cache
-      eviction="FIFO"
-      flushInterval="60000"
-      size="512"
-      readOnly="true"/>
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
 
-    <insert id="register" parameterType="com.cranberries.user.model.User" flushCache="true" useGeneratedKeys="true" keyProperty="id">
+    <insert id="register" parameterType="com.cranberries.user.model.User" flushCache="true" useGeneratedKeys="true"
+            keyProperty="id">
         INSERT INTO user(
             name,
             age,
@@ -31,7 +32,8 @@
              );
     </insert>
 
-    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.cranberries.user.model.User" flushCache="false" useCache="true">
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.cranberries.user.model.User"
+            flushCache="false" useCache="true">
         select * , id_card as idCard from user where id = #{userId};
     </select>
 
@@ -43,9 +45,9 @@
             </if>
         </set>
         <where>
-        <if test="user.id != null">
-            id = #{user.id}
-        </if>
+            <if test="user.id != null">
+                id = #{user.id}
+            </if>
         </where>
     </update>
 </mapper>

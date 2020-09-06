@@ -9,7 +9,7 @@ public interface UserMapper {
 
     Integer register(User user);
 
-//    @Select("select * from user where id = #{userId}")
+    //    @Select("select * from user where id = #{userId}")
     User getUserById(@Param(value = "userId") int userId);
 
     void updateUser(@Param("user") User user);

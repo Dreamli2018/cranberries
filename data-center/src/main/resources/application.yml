@@ -1,28 +1,17 @@
 server:
-  port: 8084
+  port: 8085
 spring:
   application:
-    name: user
-  security:
-    basic:
-      enabled: false
-  #    cloud:
-  #        gateway:
-  #            routes:
-  #                id: neo_route
-  #                uri: http://www.ityouknow.com
-  #                predicates:
-  #                    Path=/spring-cloud
+    name: data-center
 
-
-  # mysql配置
+# mysql数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cranberries?useSSL=false&serverTimezone=UTC
-    username: root
-    password: LDM369254
+    data-username: root
+    data-password: LDM369254
 
-  #redis配置
+      #redis配置
   redis:
     database: 0
     host: localhost
@@ -34,12 +23,24 @@ spring:
         max-wait: -1
         max-idel: 8
         min-idel: 0
-  data:
-    mongodb:
-      #host: 172.20.10.2
-      host: 192.168.1.106
-      port: 27017
-      database: cranberries
+
+    data:
+      mongodb:
+        #host: 172.20.10.2
+        host: 192.168.1.106
+        port: 27017
+        database: cranberries
+
+  rabbitmq:
+    host: 192.168.1.106
+    port: 15672
+    username: dreamli@1989
+    password: 369254
+    template:
+      retry:
+        enabled: true
+        initial-interval: 2s
+    #addresses: amqp://dreamli@1989:369254@192.168.1.106
 
 eureka:
   client:
@@ -52,5 +53,3 @@ eureka:
     lease-expiration-duration-in-seconds: 90
     prefer-ip-address: true
     ip-address: 127.0.0.1
-
-

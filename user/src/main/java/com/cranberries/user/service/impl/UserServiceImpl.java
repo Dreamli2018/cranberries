@@ -91,7 +91,7 @@ public class UserServiceImpl implements UserService {
             // 同时更新mongoDB中数据
             Query query = new Query().addCriteria(Criteria.where("_id").is(5));
             this.mongoTemplate.updateFirst(query, Update.update("name", user.getName()), "user");
-        }else {
+        } else {
             log.error("请求参数不能为空！");
         }
     }

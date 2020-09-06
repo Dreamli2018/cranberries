@@ -52,7 +52,7 @@ public class UserController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<ResultVO> updateUser(@RequestBody User user){
+    public ResponseEntity<ResultVO> updateUser(@RequestBody User user) {
         this.userService.updateUser(user);
         ResultVO<Object> vo = new ResultVO<>();
         vo.setCode("200");
