@@ -24,18 +24,20 @@ spring:
         max-idel: 8
         min-idel: 0
 
-    data:
-      mongodb:
-        #host: 172.20.10.2
-        host: 192.168.1.106
-        port: 27017
-        database: cranberries
+  data:
+    mongodb:
+      host: 172.20.10.2
+#      host: 192.168.1.106
+      port: 27017
+      database: cranberries
 
   rabbitmq:
-    host: 192.168.1.106
+    host: 172.20.10.2
+#    host: 192.168.1.106
     port: 15672
     username: dreamli@1989
     password: 369254
+    virtual-host: /store
     template:
       retry:
         enabled: true

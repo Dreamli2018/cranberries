@@ -6,6 +6,8 @@ import com.cranberries.user.respnose.ResultVO;
 import com.cranberries.user.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -31,6 +33,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+
+
     private static final String redis_prefix_key = "user_id_";
 
     @Override
@@ -44,6 +53,12 @@ public class UserServiceImpl implements UserService {
             result = "注册成功！";
             // 保存用户信息到mongoDB
             this.mongoTemplate.save(user);
+            String exchange = null;
+
+            String routingKey = null;
+
+            Object obj = null;
+            this.rabbitTemplate.convertAndSend(exchange, routingKey, user);
             resultVO.setCode("200");
             resultVO.setMessage("Success");
             resultVO.setData(result);

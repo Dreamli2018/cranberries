@@ -23,6 +23,7 @@
         <module>user</module>
         <module>eureka-server</module>
         <module>consul-server</module>
+        <module>data-center</module>
     </modules>
 
     <properties>
@@ -34,8 +35,8 @@
         <spring-security.version>5.3.0.RELEASE</spring-security.version>
         <spring-security-oauth2.version>2.5.0.RELEASE</spring-security-oauth2.version>
         <mybatis.version>3.5.3</mybatis.version>
-        <!--        <mysql.version>8.0.12</mysql.version>-->
-        <mysql.version>8.0.15</mysql.version>
+        <mysql.version>8.0.12</mysql.version>
+        <!--        <mysql.version>8.0.15</mysql.version>-->
         <zkclient.version>0.1</zkclient.version>
         <fastjson.version>1.2.67</fastjson.version>
         <javax.servlet.version>4.0.1</javax.servlet.version>
@@ -50,7 +51,6 @@
         <springfox.version>2.9.2</springfox.version>
         <lombok.version>1.18.0</lombok.version>
         <spring-gateway.version>2.0.1.release</spring-gateway.version>
-        <spring-amqp.version>2.2.6.RELEASE</spring-amqp.version>
         <spring-cloud-hystrix.version>1.4.7.RELEASE</spring-cloud-hystrix.version>
     </properties>
 
@@ -209,12 +209,6 @@
                 <groupId>org.apache.kafka</groupId>
                 <artifactId>kafka-clients</artifactId>
                 <version>${kafka-clients.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-amqp</artifactId>
-                <version>${spring-amqp.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter -->

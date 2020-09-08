@@ -9,8 +9,4 @@
       size="512"
       readOnly="true"/>
 
-    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.cranberries.user.model.User" flushCache="false" useCache="true">
-        select * , id_card as idCard from user where id = #{userId};
-    </select>
-
 </mapper>
