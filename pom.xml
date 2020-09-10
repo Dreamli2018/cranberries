@@ -20,10 +20,10 @@
     <modules>
         <module>book</module>
         <module>music</module>
-        <module>user</module>
         <module>eureka-server</module>
         <module>consul-server</module>
         <module>data-center</module>
+        <module>center-user</module>
     </modules>
 
     <properties>

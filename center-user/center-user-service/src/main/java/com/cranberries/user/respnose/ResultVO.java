@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 /**
  * 通用响应结果封装对象
+ *
  * @param <T>
  */
 @Data

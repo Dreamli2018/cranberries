@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 
 public class GcTest {
 
-    private static final int _1MB = 1024*1024;
+    private static final int _1MB = 1024 * 1024;
 
     @Test
     void testAllocation() {
