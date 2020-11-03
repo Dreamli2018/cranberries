@@ -28,9 +28,9 @@ public class SyncUserDataController {
      *
      * @param idList
      */
-    @PostMapping("syncHandleUserData")
+    @PostMapping("/syncHandleUserData")
     public void syncHandleUserData(@RequestParam(value = "idList", required = true) List<Integer> idList){
 
-        this.syncUserDataService.syncHandleUserData(idList);
+        this.syncUserDataService.syncHandleUserData();
     }
 }

@@ -1,7 +1,5 @@
 package com.cranberries.data.service;
 
-import java.util.List;
-
 /**
  * @author ：lidemin
  * @version ：V1.0
@@ -10,5 +8,5 @@ import java.util.List;
  * @description ：同步用户数据服务
  */
 public interface SyncUserDataService {
-    void syncHandleUserData(List<Integer> idList);
+    void syncHandleUserData();
 }

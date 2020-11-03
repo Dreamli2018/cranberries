@@ -9,7 +9,7 @@
             size="512"
             readOnly="true"/>
 
-    <insert id="register" parameterType="com.cranberries.user.model.User" flushCache="true" useGeneratedKeys="true"
+    <insert id="register" parameterType="com.cranberries.userapi.vo.User" flushCache="true" useGeneratedKeys="true"
             keyProperty="id">
         INSERT INTO user(
             name,
@@ -32,7 +32,7 @@
              );
     </insert>
 
-    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.cranberries.user.model.User"
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.cranberries.userapi.vo.User"
             flushCache="false" useCache="true">
         select * , id_card as idCard from user where id = #{userId};
     </select>
@@ -50,4 +50,8 @@
             </if>
         </where>
     </update>
+
+    <select id="queryIdList" resultType="java.lang.Integer">
+        select id from user
+    </select>
 </mapper>

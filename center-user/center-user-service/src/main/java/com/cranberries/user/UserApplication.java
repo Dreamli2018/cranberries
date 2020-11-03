@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableDiscoveryClient
 @EnableCaching
 @EnableScheduling
-@MapperScan(basePackages = "com/cranberries/user/mapper")
+@MapperScan(basePackages = "com.cranberries.user.mapper")
 public class UserApplication {
 
     public static void main(String[] args) {

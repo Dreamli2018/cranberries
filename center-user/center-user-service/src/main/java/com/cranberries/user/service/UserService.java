@@ -1,7 +1,7 @@
 package com.cranberries.user.service;
 
-import com.cranberries.user.model.User;
-import com.cranberries.user.respnose.ResultVO;
+import com.cranberries.userapi.vo.ResultVO;
+import com.cranberries.userapi.vo.User;
 
 public interface UserService {
 
@@ -10,4 +10,6 @@ public interface UserService {
     ResultVO<User> getUserById(int userId);
 
     void updateUser(User user);
+
+    void sendUserIdList();
 }

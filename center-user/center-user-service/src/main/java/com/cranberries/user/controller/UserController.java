@@ -1,8 +1,9 @@
 package com.cranberries.user.controller;
 
-import com.cranberries.user.model.User;
-import com.cranberries.user.respnose.ResultVO;
-import com.cranberries.user.service.UserService;
+
+import com.cranberries.userapi.api.UserService;
+import com.cranberries.userapi.vo.ResultVO;
+import com.cranberries.userapi.vo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

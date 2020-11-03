@@ -1,8 +1,10 @@
 package com.cranberries.user.mapper;
 
-import com.cranberries.user.model.User;
+import com.cranberries.userapi.vo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 @Mapper
 public interface UserMapper {
@@ -13,4 +15,6 @@ public interface UserMapper {
     User getUserById(@Param(value = "userId") int userId);
 
     void updateUser(@Param("user") User user);
+
+    List<Integer> queryIdList();
 }

@@ -1,9 +1,11 @@
 package com.cranberries.user.service.impl;
 
+import com.cranberries.user.config.MqConfig;
 import com.cranberries.user.mapper.UserMapper;
-import com.cranberries.user.model.User;
-import com.cranberries.user.respnose.ResultVO;
-import com.cranberries.user.service.UserService;
+import com.cranberries.userapi.api.UserService;
+import com.cranberries.userapi.vo.ResultVO;
+import com.cranberries.userapi.vo.User;
+import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
@@ -15,11 +17,14 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Service
+@RestController("/api-syncUserInfo")
 public class UserServiceImpl implements UserService {
 
     private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
@@ -39,8 +44,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
-
     private static final String redis_prefix_key = "user_id_";
+
+    public static final String routing_key = "my_routing_key.key1";
 
     @Override
     public ResultVO<String> register(User user) {
@@ -108,6 +114,15 @@ public class UserServiceImpl implements UserService {
             this.mongoTemplate.updateFirst(query, Update.update("name", user.getName()), "user");
         } else {
             log.error("请求参数不能为空！");
+        }
+    }
+
+    @Override
+    public void sendUserIdList() {
+        // 查询所有用户id
+        List<Integer> idList = this.userMapper.queryIdList();
+        if (CollectionUtils.isNotEmpty(idList)) {
+            rabbitTemplate.convertAndSend(MqConfig.EXCHANGE, routing_key, idList);
         }
     }
 }

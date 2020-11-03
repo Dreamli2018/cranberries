@@ -1,24 +1,19 @@
 package com.cranberries.user;
 
 import com.alibaba.fastjson.JSON;
-import com.cranberries.user.model.User;
-import com.cranberries.user.respnose.ResultVO;
-import com.cranberries.user.service.UserService;
-import com.github.houbb.junitperf.core.annotation.JunitPerfConfig;
-import com.github.houbb.junitperf.core.annotation.JunitPerfRequire;
-import com.github.houbb.junitperf.core.report.impl.HtmlReporter;
-import com.mongodb.MongoClient;
+import com.cranberries.userapi.api.UserService;
+import com.cranberries.userapi.vo.ResultVO;
+import com.cranberries.userapi.vo.User;
 import com.mongodb.client.result.DeleteResult;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.mongodb.core.DocumentCallbackHandler;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.test.annotation.IfProfileValue;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -154,5 +149,35 @@ public class JunitPerfTest {
         message.append("已分配状态存在2个产品超时,").append("\n").append("最终采购价状态存在1个产品超时,").append("\n");
         message.append("请联系部门经理解锁！");
         System.out.println(message.toString());
+    }
+
+
+    @Test
+    void testJoinStr() {
+        String s1 = "user_name_";
+        System.out.println(s1 + null);
+    }
+
+    @Test
+    void compareDouble() {
+        Double a = 0.850000;
+        Double b = 100.00000;
+
+        BigDecimal a1 = new BigDecimal(a);
+        BigDecimal b1 = new BigDecimal(b);
+
+        if (a1.equals(b1)){
+            System.out.println(true);
+        }else {
+            System.out.println(false);
+        }
+
+    }
+
+    @Test
+    void subStringTest() {
+        String str = "WDVNFKLBNBNKLV3";
+        String substring = str.substring(str.length() - 2, str.length());
+        System.out.println(substring);
     }
 }
