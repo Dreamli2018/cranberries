@@ -1,0 +1,57 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: data-center
+
+# mysql数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cranberries?useSSL=false&serverTimezone=UTC
+    data-username: root
+    data-password: LDM369254
+
+      #redis配置
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idel: 8
+        min-idel: 0
+
+  data:
+    mongodb:
+      host: 172.20.10.2
+#      host: 192.168.1.106
+      port: 27017
+      database: cranberries
+
+  rabbitmq:
+    host: 172.20.10.2
+#    host: 192.168.1.106
+    port: 5672
+    username: dreamli@1989
+    password: 369254
+    virtual-host: /store
+    template:
+      retry:
+        enabled: true
+        initial-interval: 2s
+    #addresses: amqp://dreamli@1989:369254@192.168.1.106
+
+eureka:
+  client:
+    serviceUrl:
+      #            defaultZone: http://dreamli:369254@127.0.0.1:10010/eureka
+      defaultZone: http://dreamli:369254@peer1:10086/eureka,http://dreamli:369254@peer2:10087/eureka,http://dreamli:369254@peer3:10088/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
