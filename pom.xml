@@ -38,7 +38,7 @@
         <mysql.version>8.0.12</mysql.version>
         <!--        <mysql.version>8.0.15</mysql.version>-->
         <zkclient.version>0.1</zkclient.version>
-        <fastjson.version>1.2.67</fastjson.version>
+        <fastjson.version>1.2.73</fastjson.version>
         <javax.servlet.version>4.0.1</javax.servlet.version>
         <commons-collections.version>3.2.1</commons-collections.version>
         <commons-lang3.version>3.9</commons-lang3.version>
@@ -152,13 +152,6 @@
                 <groupId>com.github.sgroschupf</groupId>
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
@@ -301,7 +294,7 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.73</version>
+                <version>${fastjson.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
@@ -311,9 +304,21 @@
                 <version>4.4</version>
             </dependency>
 
-
-
         </dependencies>
+
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://172.20.10.2:8081/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://172.20.10.2:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+
+    </distributionManagement>
 
 </project>
