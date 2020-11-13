@@ -17,14 +17,17 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Service
-@RestController("/api-syncUserInfo")
+@RestController
+@RequestMapping("/api-syncUserInfo")
 public class UserServiceImpl implements UserService {
 
     private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
@@ -58,13 +61,11 @@ public class UserServiceImpl implements UserService {
         if (userMapper.register(user) > 0) {
             result = "注册成功！";
             // 保存用户信息到mongoDB
-            this.mongoTemplate.save(user);
-            String exchange = null;
-
-            String routingKey = null;
-
-            Object obj = null;
-            this.rabbitTemplate.convertAndSend(exchange, routingKey, user);
+//            this.mongoTemplate.save(user);
+            String exchange = "my_exchange";
+            List<Integer> idList = new ArrayList<>();
+            idList.add(user.getId());
+            this.rabbitTemplate.convertAndSend(exchange, routing_key, idList);
             resultVO.setCode("200");
             resultVO.setMessage("Success");
             resultVO.setData(result);

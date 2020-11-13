@@ -100,18 +100,22 @@ public class JunitPerfTest {
     }
 
     @Test
-    void registerUserTest() {
+    void registerUserTest() throws InterruptedException {
 
-        User user = new User();
-        user.setName("dreamli@1989");
-        user.setPhone("18765908621");
-        user.setEmail("dreamli2018@outlook.com");
-        user.setAge("31");
-        user.setAddress("上海");
-        user.setGender(1);
-        user.setIdCard("411321198910203918");
+        for (int i = 0; i < 100; i++) {
 
-        userService.register(user);
+            User user = new User();
+            user.setName("dreamli@2012" + i);
+            user.setPhone("18765908625");
+            user.setEmail("dreamli2018@outlook.com");
+            user.setAge("34");
+            user.setAddress("zg");
+            user.setGender(1);
+            user.setIdCard("411321198910203917");
+
+            userService.register(user);
+//            Thread.sleep(1000);
+        }
     }
 
     @Test
@@ -130,7 +134,7 @@ public class JunitPerfTest {
 
     @Test
     void mongoRemoveTest() {
-        Query query = new Query().addCriteria(Criteria.where("_id").is(6));
+        Query query = new Query().addCriteria(Criteria.where("_id").is(5));
         DeleteResult user = this.mongoTemplate.remove(query, "user");
     }
 
@@ -166,9 +170,9 @@ public class JunitPerfTest {
         BigDecimal a1 = new BigDecimal(a);
         BigDecimal b1 = new BigDecimal(b);
 
-        if (a1.equals(b1)){
+        if (a1.equals(b1)) {
             System.out.println(true);
-        }else {
+        } else {
             System.out.println(false);
         }
 
