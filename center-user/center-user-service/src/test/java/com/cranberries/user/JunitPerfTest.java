@@ -184,4 +184,23 @@ public class JunitPerfTest {
         String substring = str.substring(str.length() - 2, str.length());
         System.out.println(substring);
     }
+
+    @Test
+    public void nullPointerTest() {
+
+        List<User> list = new ArrayList<>();
+
+        list.add(null);
+        list.add(new User());
+        list.add(new User());
+
+        log.info(JSON.toJSONString(list));
+
+        list.forEach(e -> {
+            if (e != null) {
+                e.setAddress("jiaDing");
+            }
+        });
+
+    }
 }
