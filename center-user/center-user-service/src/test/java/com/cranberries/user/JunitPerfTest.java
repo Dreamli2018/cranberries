@@ -102,7 +102,7 @@ public class JunitPerfTest {
     @Test
     void registerUserTest() throws InterruptedException {
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 8000; i < 16000; i++) {
 
             User user = new User();
             user.setName("dreamli@2012" + i);
