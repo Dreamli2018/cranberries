@@ -4,6 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.cranberries.userapi.api.UserService;
 import com.cranberries.userapi.vo.ResultVO;
 import com.cranberries.userapi.vo.User;
+import com.github.houbb.junitperf.core.annotation.JunitPerfConfig;
+import com.github.houbb.junitperf.core.annotation.JunitPerfRequire;
+import com.github.houbb.junitperf.core.report.impl.HtmlReporter;
 import com.mongodb.client.result.DeleteResult;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -34,8 +37,8 @@ public class JunitPerfTest {
     private MongoTemplate mongoTemplate;
 
     @Test
-//    @JunitPerfConfig(warmUp = 10, threads = 10, duration =1000, reporter = HtmlReporter.class)
-//    @JunitPerfRequire(max = 500, min = 200, average = 300, timesPerSecond = 10, percentiles = {"20:200","30:300"})
+    @JunitPerfConfig(warmUp = 10, threads = 10, duration =1000, reporter = HtmlReporter.class)
+    @JunitPerfRequire(max = 500, min = 200, average = 300, timesPerSecond = 10, percentiles = {"20:200","30:300"})
     public void junitPerfTest() {
         ExecutorService executorService =
                 new ThreadPoolExecutor(2, 4, 10000, TimeUnit.MILLISECONDS
@@ -102,7 +105,7 @@ public class JunitPerfTest {
     @Test
     void registerUserTest() throws InterruptedException {
 
-        for (int i = 8000; i < 16000; i++) {
+        for (int i = 16000; i < 26000; i++) {
 
             User user = new User();
             user.setName("dreamli@2012" + i);
@@ -201,6 +204,24 @@ public class JunitPerfTest {
                 e.setAddress("jiaDing");
             }
         });
+
+    }
+
+    @Test
+    @JunitPerfConfig(warmUp = 1000, threads = 2, duration = 5000, reporter = HtmlReporter.class)
+    @JunitPerfRequire(min = 1, max = 5, average = 8)
+    void registerUser() throws InterruptedException {
+
+            User user = new User();
+            user.setName("dreamli@2012");
+            user.setPhone("18765908625");
+            user.setEmail("dreamli2018@outlook.com");
+            user.setAge("34");
+            user.setAddress("zg");
+            user.setGender(1);
+            user.setIdCard("411321198910203917");
+
+            userService.register(user);
 
     }
 }

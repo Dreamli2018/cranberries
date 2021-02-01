@@ -48,7 +48,7 @@ public class SyncUserDataServiceImpl implements SyncUserDataService {
     private UserService userService;
 
 
-    @RabbitListener(queues = RabbitMqConfig.QUEUE, concurrency = "5-10", containerFactory = "")
+    @RabbitListener(queues = RabbitMqConfig.QUEUE, containerFactory = "")
     public void listen(List<Integer> ids, Message message, Channel channel) {
         log.info("----------------" + JSON.toJSONString(ids) + "----------------");
         try {

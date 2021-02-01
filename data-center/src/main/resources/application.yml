@@ -45,8 +45,8 @@ spring:
     #addresses: amqp://dreamli@1989:369254@192.168.1.106
     listener:
       simple:
-        concurrency: 5 # 设置监听方最少消费者数量
-        max-concurrency: 10 # 设置监听方最少消费者数量
+        #concurrency: 5 # 设置监听方最少消费者数量
+        #max-concurrency: 10 # 设置监听方最少消费者数量
         prefetch: 100 # 设置监听方消费者每次拉取消息的条数
 
 eureka:
