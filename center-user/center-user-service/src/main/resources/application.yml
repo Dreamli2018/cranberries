@@ -65,4 +65,6 @@ eureka:
     prefer-ip-address: true
     ip-address: 127.0.0.1
 
-
+feign:
+  httpclient:
+    enabled: true

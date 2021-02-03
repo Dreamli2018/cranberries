@@ -177,7 +177,11 @@
             <version>4.0.0</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>10.7.0</version>
+        </dependency>
     </dependencies>
 
 
