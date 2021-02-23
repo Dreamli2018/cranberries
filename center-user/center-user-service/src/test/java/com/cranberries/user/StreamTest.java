@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -35,8 +37,10 @@ public class StreamTest {
 
         if (CollectionUtils.isNotEmpty(list)) {
             Stream<User> userStream = list.stream();
-            int sum = userStream.filter(user -> user.getGender() == 0).mapToInt(User::getAge).sum();
-            System.out.println("男性年龄总和：" + sum);
+//            int sum = userStream.filter(user -> user.getGender() == 0).mapToInt(User::getAge).sum();
+//            System.out.println("男性年龄总和：" + sum);
+            List<Integer> ageList = userStream.filter(Objects::nonNull).filter(user -> user.getGender() == 0).map(User::getAge).collect(Collectors.toList());
+            System.out.println("男性年龄集合：" + ageList);
         }
     }
 }
