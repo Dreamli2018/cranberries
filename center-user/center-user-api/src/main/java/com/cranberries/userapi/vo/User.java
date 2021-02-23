@@ -32,7 +32,7 @@ public class User implements Serializable {
 
     @ApiModelProperty(value = "年龄")
     @Field
-    private String age;
+    private Integer age;
 
     @ApiModelProperty(value = "性别, 0-女，1-男")
     @Field

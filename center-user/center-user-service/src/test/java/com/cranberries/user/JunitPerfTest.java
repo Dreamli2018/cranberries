@@ -111,7 +111,7 @@ public class JunitPerfTest {
             user.setName("dreamli@2012" + i);
             user.setPhone("18765908625");
             user.setEmail("dreamli2018@outlook.com");
-            user.setAge("34");
+            user.setAge(34);
             user.setAddress("zg");
             user.setGender(1);
             user.setIdCard("411321198910203917");
@@ -216,7 +216,7 @@ public class JunitPerfTest {
             user.setName("dreamli@2012");
             user.setPhone("18765908625");
             user.setEmail("dreamli2018@outlook.com");
-            user.setAge("34");
+            user.setAge(34);
             user.setAddress("zg");
             user.setGender(1);
             user.setIdCard("411321198910203917");
