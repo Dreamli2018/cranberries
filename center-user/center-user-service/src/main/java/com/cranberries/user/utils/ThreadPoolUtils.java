@@ -20,10 +20,10 @@ import java.util.concurrent.TimeUnit;
 @EnableAsync
 public class ThreadPoolUtils implements AsyncConfigurer {
 
-    public static ExecutorService createDefaultExecutorService() {
+    public static ExecutorService createDefaultExecutorService(Args args) {
         SynchronousQueue executorQueue = new SynchronousQueue();
 
-        return new ThreadPoolExecutor(4, 256, 60L, TimeUnit.SECONDS,
+        return new ThreadPoolExecutor(args.corePoolSize.getIndex(), args.maxPoolSize.getIndex(), 60L, TimeUnit.SECONDS,
                 executorQueue);
     }
 }
