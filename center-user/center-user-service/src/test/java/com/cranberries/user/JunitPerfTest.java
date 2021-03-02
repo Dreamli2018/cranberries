@@ -51,12 +51,9 @@ public class JunitPerfTest {
 
         List<String> list = new ArrayList<>();
 
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 1; i < size; i++) {
-                    list.add(prefix + i);
-                }
+        executorService.execute(() -> {
+            for (int i = 1; i < size; i++) {
+                list.add(prefix + i);
             }
         });
 
