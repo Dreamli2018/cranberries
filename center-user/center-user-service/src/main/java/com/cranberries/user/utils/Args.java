@@ -7,7 +7,7 @@ package com.cranberries.user.utils;
  * @date ：Created in 2021/03/02 11:30
  * @description ：参数枚举类
  */
- enum  Args {
+public enum  Args {
 
     corePoolSize(1,4),
 

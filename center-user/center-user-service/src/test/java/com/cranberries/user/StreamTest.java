@@ -43,4 +43,10 @@ public class StreamTest {
             System.out.println("男性年龄集合：" + ageList);
         }
     }
+
+    @Test
+    void cpuTest() {
+        int cpuNum = Runtime.getRuntime().availableProcessors();
+        System.out.println("本机cpu核数：" + cpuNum);
+    }
 }

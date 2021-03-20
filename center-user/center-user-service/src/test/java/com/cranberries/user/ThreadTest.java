@@ -1,5 +1,6 @@
 package com.cranberries.user;
 
+import com.cranberries.user.utils.Args;
 import com.cranberries.user.utils.ThreadPoolUtils;
 import com.cranberries.userapi.api.UserService;
 import com.cranberries.userapi.vo.User;
@@ -34,7 +35,7 @@ public class ThreadTest {
     @Test
     void testThreadPool() {
         long start = System.currentTimeMillis();
-        ThreadPoolUtils.createDefaultExecutorService().execute(() -> {
+        ThreadPoolUtils.createDefaultExecutorService(Args.corePoolSize).execute(() -> {
             for (int i = 0; i <= 1000; i++) {
                 User user = new User();
                 user.setIdCard("411321198910203918" + i);
