@@ -2,7 +2,6 @@ package com.cranberries.user.utils;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
-import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.SynchronousQueue;
@@ -17,7 +16,6 @@ import java.util.concurrent.TimeUnit;
  * @description ：线程池通用工具类
  */
 @Configuration
-@EnableAsync
 public class ThreadPoolUtils implements AsyncConfigurer {
 
     public static ExecutorService createDefaultExecutorService(Args args) {

@@ -24,6 +24,8 @@
         <module>consul-server</module>
         <module>data-center</module>
         <module>center-user</module>
+        <module>pay</module>
+        <module>open-elasticsearch</module>
     </modules>
 
     <properties>

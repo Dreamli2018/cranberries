@@ -3,7 +3,6 @@ package com.cranberries.user.utils;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
@@ -16,7 +15,6 @@ import java.util.concurrent.Executor;
  * @description ：线程池工具类
  */
 @Configuration
-@EnableAsync
 public class ExecutorUtils implements AsyncConfigurer {
 
     @Override

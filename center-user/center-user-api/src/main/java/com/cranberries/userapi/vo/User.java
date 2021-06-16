@@ -20,6 +20,8 @@ import java.io.Serializable;
 @Document(value = "user")
 public class User implements Serializable {
 
+    private static final long serialVersionUID = -6719466170541152121L;
+
     @Field
     @Indexed
     private Integer id;
