@@ -35,17 +35,17 @@ public class Book implements Serializable {
 
     @Field(name = "author")
     @ApiModelProperty(value = "作者", example = "钱钟书", required = true)
-    private Integer author;
+    private String author;
 
     @Field(name = "price")
     @ApiModelProperty(value = "价格", example = "17.88", required = true)
-    private Integer price;
+    private Double price;
 
     @Field(name = "country")
     @ApiModelProperty(value = "国家", example = "中国", required = true)
     private String country;
 
     @Field(name = "type")
-    @ApiModelProperty(value = "类型", example = "文学", required = true)
-    private String type;
+    @ApiModelProperty(value = "类型", example = "1-文学、2-计算机", required = true)
+    private Integer type;
 }

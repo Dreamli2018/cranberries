@@ -4,18 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.cranberries</groupId>
-        <artifactId>store</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>book</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.cranberries</groupId>
-    <artifactId>books</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>book</name>
-    <description>Demo project for Spring Boot</description>
+    <artifactId>book-service</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>book-service</name>
 
     <properties>
         <java.version>1.8</java.version>
         <project.bulid.sourceEncoding>UTF-8</project.bulid.sourceEncoding>
+        <project>com.cranberries.book.BookApplication</project>
+        <book-api.version>1.0.0-SNAPSHOT</book-api.version>
     </properties>
 
     <dependencies>
@@ -30,9 +31,23 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.cranberries</groupId>
+            <artifactId>book-api</artifactId>
+            <version>${book-api.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
         <finalName>book</finalName>
         <resources>
             <resource>
@@ -53,12 +68,7 @@
                 <filtering>false</filtering>
             </resource>
         </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+
     </build>
 
 </project>
