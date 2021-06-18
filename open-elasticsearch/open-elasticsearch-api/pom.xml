@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>open-elasticsearch-api</artifactId>
+    <artifactId>open-elasticsearch-com.cranberries.book.api</artifactId>
 
 
 </project>
