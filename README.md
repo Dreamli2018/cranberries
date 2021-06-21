@@ -1,2 +1,2 @@
 # cranberries
-bookDTO and music store
+book and music store
