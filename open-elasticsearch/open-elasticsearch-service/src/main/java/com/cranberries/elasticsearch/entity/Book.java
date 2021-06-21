@@ -8,7 +8,6 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 
 import java.io.Serializable;
-import java.lang.annotation.Native;
 
 /**
  * @author ：Dream Li
@@ -28,24 +27,23 @@ public class Book implements Serializable {
     @ApiModelProperty(value = "主键-pk", example = "0000001")
     private Integer id;
 
-
     @Field(name = "name")
-    @ApiModelProperty(value = "书名", example = "围城", required = true)
+    @ApiModelProperty(value = "书名", example = "围城")
     private String name;
 
     @Field(name = "author")
-    @ApiModelProperty(value = "作者", example = "钱钟书", required = true)
+    @ApiModelProperty(value = "作者", example = "钱钟书")
     private String author;
 
     @Field(name = "price")
-    @ApiModelProperty(value = "价格", example = "17.88", required = true)
+    @ApiModelProperty(value = "价格", example = "17.88")
     private Double price;
 
     @Field(name = "country")
-    @ApiModelProperty(value = "国家", example = "中国", required = true)
+    @ApiModelProperty(value = "国家", example = "中国")
     private String country;
 
     @Field(name = "type")
-    @ApiModelProperty(value = "类型", example = "1-文学、2-计算机", required = true)
+    @ApiModelProperty(value = "类型", example = "1-文学、2-计算机")
     private Integer type;
 }

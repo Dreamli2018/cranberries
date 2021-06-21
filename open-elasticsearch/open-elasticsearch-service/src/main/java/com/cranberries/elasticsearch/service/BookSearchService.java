@@ -17,4 +17,6 @@ public interface BookSearchService {
     void save(List<Book> books);
 
     List<Book> query(Map<String, Object> request);
+
+    List<Book> searchByCondition(Book book);
 }

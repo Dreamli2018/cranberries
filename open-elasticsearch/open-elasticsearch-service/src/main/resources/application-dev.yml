@@ -32,7 +32,12 @@ spring:
 #          endpoints:
 #          username:
 #          password:
-      cluster-nodes: 127.0.0.1:9200
-      cluster-name: elasticsearch
       repositories:
         enabled: true
+
+#elastic
+  elasticsearch:
+    host: 127.0.0.1
+    port: 9300
+    cluster:
+      name: elasticsearch

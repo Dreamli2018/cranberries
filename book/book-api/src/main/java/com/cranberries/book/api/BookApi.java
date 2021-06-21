@@ -14,7 +14,7 @@ import java.util.List;
  * @description ：书籍api
  */
 
-@FeignClient(name = "book")
+@FeignClient(value = "book")
 public interface BookApi {
 
     @GetMapping("/book/query")
