@@ -23,14 +23,21 @@ eureka:
 
 # es
 spring:
-  data:
-    elasticsearch:
-      client:
-        reactive:
-          connection-timeout: 30
-          use-ssl: false
+#  data:
+#    elasticsearch:
+#      client:
+#        reactive:
+#          connection-timeout: 30
+#          use-ssl: false
 #          endpoints:
 #          username:
 #          password:
-      repositories:
-        enabled: true
+#      repositories:
+#        enabled: true
+
+#elastic
+  elasticsearch:
+    host: 127.0.0.1
+    port: 9300
+    cluster:
+      name: elasticsearch

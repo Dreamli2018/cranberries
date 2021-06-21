@@ -23,17 +23,17 @@ eureka:
 
 # es
 spring:
-  data:
-    elasticsearch:
-      client:
-        reactive:
-          connection-timeout: 30
-          use-ssl: false
+#  data:
+#    elasticsearch:
+#      client:
+#        reactive:
+#          connection-timeout: 30
+#          use-ssl: false
 #          endpoints:
 #          username:
 #          password:
-      repositories:
-        enabled: true
+#      repositories:
+#        enabled: true
 
 #elastic
   elasticsearch:

@@ -46,6 +46,13 @@
             <version>2.5.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch -->
+       <!-- <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>6.8.7</version>
+        </dependency>-->
+
        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/io.searchbox/jest &ndash;&gt;
         <dependency>
             <groupId>io.searchbox</groupId>
