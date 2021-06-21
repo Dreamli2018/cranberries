@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "user", contextId = "syncUserInfo", path = "/api-syncUserInfo")
+@FeignClient(name = "user", contextId = "syncUserInfo", path = "/com.cranberries.book.api-syncUserInfo")
 public interface UserService {
 
     @PostMapping("/register")

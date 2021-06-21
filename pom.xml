@@ -24,6 +24,8 @@
         <module>consul-server</module>
         <module>data-center</module>
         <module>center-user</module>
+        <module>pay</module>
+        <module>open-elasticsearch</module>
     </modules>
 
     <properties>
@@ -154,10 +156,10 @@
                 <version>${zkclient.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+            <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-com.cranberries.book.api -->
             <dependency>
                 <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
+                <artifactId>javax.servlet-com.cranberries.book.api</artifactId>
                 <version>${javax.servlet.version}</version>
                 <scope>provided</scope>
             </dependency>

@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+#eureka配置
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://dreamli:369254@127.0.0.1:10010/eureka
+      defaultZone: http://dreamli:369254@peer1:10086/eureka,http://dreamli:369254@peer2:10087/eureka,http://dreamli:369254@peer3:10088/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+
+  # mysql配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cranberries?useSSL=false&serverTimezone=UTC
+    username: root
+    password: LDM369254

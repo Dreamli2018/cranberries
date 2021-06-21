@@ -2,51 +2,57 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.cranberries</groupId>
-        <artifactId>store</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>book</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <groupId>com.cranberries</groupId>
-    <artifactId>book</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>book</name>
-    <packaging>pom</packaging>
-    <description>Demo project for Spring Boot</description>
-
-    <modules>
-        <module>book-api</module>
-        <module>book-service</module>
-    </modules>
+    <artifactId>book-service</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>book-service</name>
 
     <properties>
         <java.version>1.8</java.version>
         <project.bulid.sourceEncoding>UTF-8</project.bulid.sourceEncoding>
-        <start-class>com.cranberries.book.BookApplication</start-class>
+        <project>com.cranberries.book.BookApplication</project>
+        <book-api.version>1.0.0-SNAPSHOT</book-api.version>
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
+            <groupId>com.cranberries</groupId>
+            <artifactId>book-api</artifactId>
+            <version>${book-api.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-models</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
