@@ -67,12 +67,25 @@ public class BookSearchServiceImpl implements BookSearchService {
     @Override
     public List<Book> query(Map<String, Object> request) {
         Iterable<Book> books = bookSearchRepository.findAll();
+        // 处理查询结果
+        List<Book> bookList = this.handleResult(books);
+        return bookList;
+    }
+
+    /**
+     * 处理搜索结果
+     * @param books 搜索结果
+     * @return
+     */
+    private List<Book> handleResult(Iterable<Book> books) {
         List<Book> bookList = new ArrayList<>();
-        books.forEach(item -> {
-            Book book = new Book();
-            BeanUtils.copyProperties(item, book);
-            bookList.add(book);
-        });
+        if (books != null) {
+            books.forEach(item -> {
+                Book book = new Book();
+                BeanUtils.copyProperties(item, book);
+                bookList.add(book);
+            });
+        }
         return bookList;
     }
 
@@ -93,12 +106,8 @@ public class BookSearchServiceImpl implements BookSearchService {
         searchQuery.addAggregation(aggregationBuilder);
         // 执行搜索
         Iterable<Book> books = bookSearchRepository.search(searchQuery);
-        List<Book> bookList = new ArrayList<>();
-        books.forEach(item -> {
-            Book book1 = new Book();
-            BeanUtils.copyProperties(item, book1);
-            bookList.add(book1);
-        });
+        // 处理搜索结果
+        List<Book> bookList = this.handleResult(books);
         return bookList;
     }
 
