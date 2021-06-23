@@ -2,24 +2,20 @@ package com.cranberries.elasticsearch.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.cranberries.book.api.BookApi;
+import com.cranberries.book.dto.request.BookDTO;
 import com.cranberries.elasticsearch.entity.Book;
 import com.cranberries.elasticsearch.repository.BookSearchRepository;
 import com.cranberries.elasticsearch.service.BookSearchService;
-import com.cranberries.book.dto.request.BookDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.search.aggregations.*;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.BucketOrder;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
-import org.springframework.data.elasticsearch.core.query.Query;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
