@@ -6,8 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author ：Dream Li
@@ -39,11 +41,15 @@ public class Book implements Serializable {
     @ApiModelProperty(value = "价格", example = "17.88")
     private Double price;
 
-    @Field(name = "country")
+    @Field(name = "country", type = FieldType.Keyword, analyzer = "cjk")
     @ApiModelProperty(value = "国家", example = "中国")
     private String country;
 
     @Field(name = "type")
     @ApiModelProperty(value = "类型", example = "1-文学、2-计算机")
     private Integer type;
+
+    @Field(name = "publicationDate", index = false)
+    @ApiModelProperty(value = "出版日期", example = "2018-10-20")
+    private Date publicationDate;
 }
