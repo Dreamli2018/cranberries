@@ -93,9 +93,9 @@ public class BookSearchServiceImpl implements BookSearchService {
     public List<Book> searchByCondition(Book book) {
         // 条件过滤
         QueryBuilder queryBuilder = QueryBuilders.boolQuery()
-                .must(QueryBuilders.termQuery("type", book.getType()))
-                .must(QueryBuilders.prefixQuery("author.keyword", book.getAuthor()))
-                .should(QueryBuilders.fuzzyQuery("name.keyword", book.getName()).boost(2))
+//                .must(QueryBuilders.termQuery("type", book.getType()))
+//                .must(QueryBuilders.prefixQuery("author.keyword", book.getAuthor()))
+                .should(QueryBuilders.matchQuery("name", book.getName()).boost(2))
                 .must(QueryBuilders.rangeQuery("price").gte(10).lte(100));
         // 聚合
         TermsAggregationBuilder aggregationBuilder =

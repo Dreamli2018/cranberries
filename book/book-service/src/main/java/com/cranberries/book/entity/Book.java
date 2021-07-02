@@ -52,6 +52,11 @@ public class Book implements Serializable {
     private Integer type;
 
     /**
+     * 图片链接
+     */
+    private String imageUrl;
+
+    /**
      * 出版日期
      */
     private Date publicationDate;
