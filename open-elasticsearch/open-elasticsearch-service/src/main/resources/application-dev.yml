@@ -41,3 +41,7 @@ spring:
     port: 9300
     cluster:
       name: elasticsearch
+
+#log
+#logging:
+ # file: /Users/dreamli/log/elastic-logstash.log

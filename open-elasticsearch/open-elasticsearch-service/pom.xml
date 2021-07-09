@@ -20,6 +20,7 @@
         <java.version>1.8</java.version>
         <start-class>com.cranberries.elasticsearch.OpenElasticsearchApplication</start-class>
         <book-api.version>1.0.0-SNAPSHOT</book-api.version>
+        <elastic-apm.version>1.20.0</elastic-apm.version>
     </properties>
 
     <dependencies>
@@ -98,6 +99,12 @@
             <groupId>com.cranberries</groupId>
             <artifactId>book-api</artifactId>
             <version>${book-api.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>co.elastic.apm</groupId>
+            <artifactId>apm-agent-attach</artifactId>
+            <version>${elastic-apm.version}</version>
         </dependency>
 
     </dependencies>

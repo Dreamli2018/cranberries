@@ -91,6 +91,7 @@ public class BookSearchServiceImpl implements BookSearchService {
 
     @Override
     public List<Book> searchByCondition(Book book) {
+        log.info("条件搜索请求参数:{}", JSON.toJSONString(book));
         // 条件过滤
         QueryBuilder queryBuilder = QueryBuilders.boolQuery()
 //                .must(QueryBuilders.termQuery("type", book.getType()))
@@ -109,6 +110,7 @@ public class BookSearchServiceImpl implements BookSearchService {
         Iterable<Book> books = bookSearchRepository.search(searchQuery);
         // 处理搜索结果
         List<Book> bookList = this.handleResult(books);
+        log.info("搜索结果:{}", JSON.toJSONString(bookList));
         return bookList;
     }
 
