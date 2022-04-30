@@ -19,4 +19,6 @@ public interface BookSearchService {
     List<Book> query(Map<String, Object> request);
 
     List<Book> searchByCondition(Book book);
+
+    Book queryById(Integer id);
 }

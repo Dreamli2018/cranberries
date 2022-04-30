@@ -16,11 +16,13 @@ import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilde
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * @author ：Dream Li
@@ -32,6 +34,7 @@ import java.util.Map;
 
 @Service
 @Slf4j
+@EnableAsync
 public class BookSearchServiceImpl implements BookSearchService {
 
     @Autowired
@@ -39,6 +42,9 @@ public class BookSearchServiceImpl implements BookSearchService {
 
     @Autowired
     private BookApi bookApi;
+
+    @Autowired
+    private BookAsync bookAsync;
 
     @Override
     public void save(List<Book> books) {
@@ -55,6 +61,7 @@ public class BookSearchServiceImpl implements BookSearchService {
                 }
             }
         }
+        this.bookAsync.asyncMethod(books);
         log.info("要保存书籍列表:{}", JSON.toJSONString(books));
         try {
             this.bookSearchRepository.saveAll(books);
@@ -62,6 +69,7 @@ public class BookSearchServiceImpl implements BookSearchService {
             e.printStackTrace();
             log.error("保存书籍到es异常:{}", e.getMessage());
         }
+        log.info("保存书籍到es完成");
     }
 
     @Override
