@@ -26,6 +26,9 @@
         <module>center-user</module>
         <module>pay</module>
         <module>open-elasticsearch</module>
+        <module>tcp-netty-server</module>
+        <module>tcp-netty-client</module>
+        <module>spark</module>
     </modules>
 
     <properties>
