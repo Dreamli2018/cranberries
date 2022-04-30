@@ -17,6 +17,6 @@ import java.util.List;
 @Mapper
 public interface BookMapper {
 
-    @Select("select * from book")
+    @Select("select * , image_url AS imageUrl, publication_date AS publicationDate from book")
     List<BookDTO> queryAll();
 }

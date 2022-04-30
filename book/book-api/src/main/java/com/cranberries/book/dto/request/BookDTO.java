@@ -40,6 +40,9 @@ public class BookDTO implements Serializable {
     @ApiModelProperty(value = "类型", example = "1-文学、2-计算机", required = true)
     private Integer type;
 
+    @ApiModelProperty(value = "图片链接", example = "/Users/dreamli/image/dog.jpg", required = true)
+    private String imageUrl;
+
     @ApiModelProperty(value = "出版日期", example = "2020-06-18", required = true)
     private Date publicationDate;
 

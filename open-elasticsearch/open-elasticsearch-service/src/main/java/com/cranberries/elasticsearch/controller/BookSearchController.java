@@ -39,7 +39,7 @@ public class BookSearchController {
         return bookSearchService.query(map);
     }
 
-    @ApiOperation("查询所有书籍")
+    @ApiOperation("条件搜索书籍")
     @PostMapping("/searchByCondition")
     public List<Book> searchByCondition(@RequestBody Book book){
 

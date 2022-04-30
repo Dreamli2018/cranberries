@@ -2,24 +2,20 @@ package com.cranberries.elasticsearch.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.cranberries.book.api.BookApi;
+import com.cranberries.book.dto.request.BookDTO;
 import com.cranberries.elasticsearch.entity.Book;
 import com.cranberries.elasticsearch.repository.BookSearchRepository;
 import com.cranberries.elasticsearch.service.BookSearchService;
-import com.cranberries.book.dto.request.BookDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.search.aggregations.*;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.BucketOrder;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregationBuilder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
-import org.springframework.data.elasticsearch.core.query.Query;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -71,22 +67,37 @@ public class BookSearchServiceImpl implements BookSearchService {
     @Override
     public List<Book> query(Map<String, Object> request) {
         Iterable<Book> books = bookSearchRepository.findAll();
+        // 处理查询结果
+        List<Book> bookList = this.handleResult(books);
+        return bookList;
+    }
+
+    /**
+     * 处理搜索结果
+     * @param books 搜索结果
+     * @return
+     */
+    private List<Book> handleResult(Iterable<Book> books) {
         List<Book> bookList = new ArrayList<>();
-        books.forEach(item -> {
-            Book book = new Book();
-            BeanUtils.copyProperties(item, book);
-            bookList.add(book);
-        });
+        if (books != null) {
+            books.forEach(item -> {
+                Book book = new Book();
+                BeanUtils.copyProperties(item, book);
+                bookList.add(book);
+            });
+        }
         return bookList;
     }
 
     @Override
     public List<Book> searchByCondition(Book book) {
+        log.info("条件搜索请求参数:{}", JSON.toJSONString(book));
         // 条件过滤
         QueryBuilder queryBuilder = QueryBuilders.boolQuery()
-                .must(QueryBuilders.termQuery("type", book.getType()))
-                .must(QueryBuilders.termQuery("author.keyword", book.getAuthor()))
-                .must(QueryBuilders.rangeQuery("price").gte(20).lte(40));
+//                .must(QueryBuilders.termQuery("type", book.getType()))
+//                .must(QueryBuilders.prefixQuery("author.keyword", book.getAuthor()))
+                .should(QueryBuilders.matchQuery("name", book.getName()).boost(2))
+                .must(QueryBuilders.rangeQuery("price").gte(10).lte(100));
         // 聚合
         TermsAggregationBuilder aggregationBuilder =
                 AggregationBuilders.terms("by_author").field("author.keyword").size(20)
@@ -97,12 +108,9 @@ public class BookSearchServiceImpl implements BookSearchService {
         searchQuery.addAggregation(aggregationBuilder);
         // 执行搜索
         Iterable<Book> books = bookSearchRepository.search(searchQuery);
-        List<Book> bookList = new ArrayList<>();
-        books.forEach(item -> {
-            Book book1 = new Book();
-            BeanUtils.copyProperties(item, book1);
-            bookList.add(book1);
-        });
+        // 处理搜索结果
+        List<Book> bookList = this.handleResult(books);
+        log.info("搜索结果:{}", JSON.toJSONString(bookList));
         return bookList;
     }
 
